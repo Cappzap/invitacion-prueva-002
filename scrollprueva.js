@@ -1,11 +1,14 @@
-const video = document.getElementById('scrollVideo');
+// Si quieres animaciones al hacer scroll, puedes usar esto como base
+window.addEventListener("scroll", () => {
+  const sections = document.querySelectorAll(".scene");
+  const trigger = window.innerHeight * 0.6;
 
-window.addEventListener('scroll', () => {
-  const scrollTop = window.scrollY;
-  const maxScroll = document.body.scrollHeight - window.innerHeight;
-  const scrollFraction = scrollTop / maxScroll;
-
-  if (!isNaN(video.duration)) {
-    video.currentTime = video.duration * scrollFraction;
-  }
+  sections.forEach(section => {
+    const top = section.getBoundingClientRect().top;
+    if (top < trigger) {
+      section.classList.add("active");
+    } else {
+      section.classList.remove("active");
+    }
+  });
 });

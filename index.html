@@ -2,14 +2,31 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Scroll Prueba</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Storytelling</title>
   <link rel="stylesheet" href="scrollprueva.css">
 </head>
 <body>
+  <div class="video-container">
+    <video src="video.mp4" autoplay muted loop playsinline></video>
+  </div>
 
-  <section class="scroll-video">
-    <video id="scrollVideo" src="video.mp4" muted playsinline></video>
-  </section>
+  <div class="content">
+    <section class="scene" id="scene1">
+      <h1>¡Bienvenido!</h1>
+      <p>Desliza hacia abajo para descubrir...</p>
+    </section>
+
+    <section class="scene" id="scene2">
+      <h1>Segunda sección</h1>
+      <p>Este es el momento en que la historia comienza.</p>
+    </section>
+
+    <section class="scene" id="scene3">
+      <h1>Final</h1>
+      <p>Gracias por visitar esta experiencia interactiva.</p>
+    </section>
+  </div>
 
   <script src="scrollprueva.js"></script>
 </body>
